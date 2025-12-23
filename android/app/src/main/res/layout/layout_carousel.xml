@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="#1A1A1A"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="←"
+            android:backgroundTint="#333333"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a Reply"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="10dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/replies_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+        
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_shorter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shorter"
+            android:textColor="#000000"
+            style="@style/Widget.MaterialComponents.Chip.Action"/>
+            
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_funnier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Funnier"
+            style="@style/Widget.MaterialComponents.Chip.Action"/>
+            
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_toxic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toxic"
+            style="@style/Widget.MaterialComponents.Chip.Action"/>
+    </LinearLayout>
+</LinearLayout>

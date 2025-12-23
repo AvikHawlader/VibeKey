@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="#1A1A1A"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Replying to..."
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <Spinner
+            android:id="@+id/context_spinner"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="#333333"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="3"
+        android:rowCount="2">
+
+        <Button android:id="@+id/btn_roast" android:text="Roast" style="@style/VibeButton"/>
+        <Button android:id="@+id/btn_professional" android:text="💼 Pro" style="@style/VibeButton"/>
+        <Button android:id="@+id/btn_flirty" android:text="Flirty" style="@style/VibeButton"/>
+
+        <Button android:id="@+id/btn_defuse" android:text="Defuse" style="@style/VibeButton"/>
+        <Button android:id="@+id/btn_ghost" android:text="Ghost" style="@style/VibeButton"/>
+        <Button android:id="@+id/btn_custom" android:text="Custom" style="@style/VibeButton"/>
+
+    </GridLayout>
+</LinearLayout>
